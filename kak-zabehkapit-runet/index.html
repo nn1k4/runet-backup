@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Как забэкапить рунет? – Telegraph</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="MobileOptimized" content="176" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:site_name" content="Telegraph">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как забэкапить рунет?">
+    <meta property="og:description" content="Рунет очень скоро может уйти в офлайн.  То есть из-за границы  многие сайты в один прекрасный день станут недоступны. Советую уже сейчас начинать бэкапить ваши любимые сайты в зоне .ru прежде чем вы обнаружите Error 403 Forbidden
+Как забэкапить сайт? 
+Вот вам краткая инструкция на примере одного из моих любимых сайтов tproger.ru 
+
+Забэкапить сайт одной строкой можно так">
+    <meta property="og:image" content="">
+    <meta property="article:published_time" content="2019-02-07T20:07:48+0000">
+    <meta property="article:modified_time" content="2019-02-22T01:05:41+0000">
+    <meta property="article:author" content="@mik4">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Как забэкапить рунет?">
+    <meta name="twitter:description" content="Рунет очень скоро может уйти в офлайн.  То есть из-за границы  многие сайты в один прекрасный день станут недоступны. Советую уже сейчас начинать бэкапить ваши любимые сайты в зоне .ru прежде чем вы обнаружите Error 403 Forbidden
+Как забэкапить сайт? 
+Вот вам краткая инструкция на примере одного из моих любимых сайтов tproger.ru 
+
+Забэкапить сайт одной строкой можно так">
+    <meta name="twitter:image" content="">
+    <link rel="shortcut icon" href="favicon.ico@1" type="image/x-icon">
+    <link rel="icon" type="image/png" href="images/favicon.png@1" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicon_2x.png@1" sizes="32x32">
+    <link href="css/quill.core.min.css" rel="stylesheet">
+    <link href="css/core.min.css@44.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="tl_page_wrap">
+      <div class="tl_page">
+        <main class="tl_article">
+          <header class="tl_article_header">
+            <h1 dir="auto">Как забэкапить рунет?</h1>
+            <address dir="auto">
+              <a rel="author">@mik4</a><!--
+           --><time datetime="2019-02-07T20:07:48+0000">February 07, 2019</time>
+            </address>
+          </header>
+          <article id="_tl_editor" class="tl_article_content"><h1>Как забэкапить рунет?<br></h1><address>@mik4<br></address><p>Рунет очень скоро может уйти в офлайн.  То есть из-за границы  многие сайты в один прекрасный день станут недоступны. Советую уже сейчас начинать бэкапить ваши любимые сайты в зоне <strong>.ru</strong> прежде чем вы обнаружите <strong>Error 403 Forbidden</strong></p><h3 id="Как-забэкапить-сайт?">Как забэкапить сайт? </h3><p><br class="inline">Вот вам краткая инструкция на примере одного из моих любимых сайтов <a href="https://tproger.ru/" target="_blank"><strong>tproger.ru</strong></a><strong> </strong></p><p><br></p><p>Забэкапить сайт одной строкой можно так</p><blockquote> <strong>wget -P tproger -r -p -k -E -K -N -nv -t inf --restrict-file-names=windows --limit-rate=200k -e robots=off --domains=tproger.ru tproger.ru</strong></blockquote><p>архив весит <strong>1 GB</strong> (скачал за <strong>4 </strong>часа)</p><p>Проверте, верно ли были сконвертированы ссылки в локальные<br class="inline">Если да, то удаляем файлы с раширением .html.orig </p><blockquote><strong>find tproger -type f -name &#39;*.html.orig&#39; -print0 | xargs -0 /bin/rm -f</strong></blockquote><p>заархивировать папку с сайтом можно так</p><blockquote><strong><em>find tproger -depth -print | pax -w -x cpio | bzip2 &gt; tproger.cpio.bz2</em></strong></blockquote><p>после архивации весит <strong>398 MB</strong></p><p>восстановить сайт из архива можно так</p><blockquote><strong><em>pax -rjf tproger.cpio.bz2</em></strong></blockquote><p>Посмотреть сайт локально можно запустив сервер одной строкой </p><blockquote><strong><em>python -m SimpleHTTPServer 8000</em></strong></blockquote><p>потом в браузере вводите <strong>http://127.0.0.1:8000</strong></p><p>и смотрите сайт даже если рунет ушел в офлайн.</p><p><br></p><p>Если вы не владеете командной строкой и не хотите нагружать любимый сайт закачками, то можете просто скачать уже готовый архив сайта и сохранить его до худших времен. Вот магнитная ссылка на архив сайта  <strong>tproger.ru </strong></p><p><br></p><blockquote><strong>magnet:?xt=urn:btih:0DB87F9D17AACA9F55ECD3D639382A78ADCF7813&amp;dn=tproger.cpio.bz2&amp;tr=udp%3a%2f%2ftracker.openbittorrent.com%3a80%2fannounce&amp;tr=udp%3a%2f%2ftracker.opentrackr.org%3a1337%2fannounce</strong></blockquote><p><br class="inline">Имя: tproger.cpio.bz2<br class="inline">Дата создания бэкапа: 3 февраля 2019 года<br class="inline"></p><p>Размер: 418021108 байтов (398 MiB)</p><p>SHA256: 16E86CDDB07C82C31829356318380E74787FA6F63EE8E7BAAD4D549CDA447162</p><p><br class="inline"></p><p>µTorrent  можно скачать здесь <strong>https://www.utorrent.com/utweb-index</strong></p><p><br class="inline"></p><p><strong>Как забэкапить одну страницу на сайте?</strong></p><p>Например, скачать эту страницу одной строкой вы можете так.</p><blockquote><strong>wget -P backupweb -r -l 1 -np -p -k -E -K -N -nv -t inf --restrict-file-names=windows  --limit-rate=200k -e robots=off https://telegra.ph/Kak-zabehkapit-runet-02-07</strong></blockquote><p>Если на странице есть ссылки на файлы, которые находятся на других сайтах и нужно эти файлы тоже скачать, но не скачивать при этом другие сайты,  то добавь просто ключ <strong>-H </strong>при условии, что ключ <strong>-r</strong> должен быть ограничен  ключами <strong>-l</strong> , <strong>-np</strong> и URL-ом отдельно взятой страницы, а не всего домена, то есть так.</p><blockquote><strong>wget -P backupweb -r -l 1 -np -p -k -E -K -N -H -nv -t inf --restrict-file-names=windows  --limit-rate=200k -e robots=off https://telegra.ph/Kak-zabehkapit-runet-02-07</strong></blockquote><p>Проверь, верно ли были сконвертированы ссылки. Если да, то удали файлы с раширением .html.orig</p><blockquote><strong>find backupweb -type f -name &#39;*.html.orig&#39; -print0 | xargs -0 /bin/rm -f</strong></blockquote><p><em>Сжать в архив:</em></p><blockquote><strong>find backupweb -depth -print | pax -w -x cpio | bzip2 &gt; backupweb.cpio.bz2</strong></blockquote><p><em>Разархивировать:</em></p><blockquote><strong>pax -rjf backupweb.cpio.bz2</strong></blockquote><p>Далее запускаете сервер </p><blockquote><strong>python -m SimpleHTTPServer 8000</strong></blockquote><p>и смотрите сохранёную страницу перейдя в браузере по адресу</p><p><em>http://127.0.0.1:8000/backupweb/telegra.ph/Kak-zabehkapit-runet-02-07.html</em></p><p>можно в терминале</p><blockquote><strong>curl http://127.0.0.1:8000/backupweb/telegra.ph/Kak-zabehkapit-runet-02-07.html |  w3m -T text/html</strong></blockquote><p>или так</p><blockquote><strong>curl http://127.0.0.1:8000/backupweb/telegra.ph/Kak-zabehkapit-runet-02-07.html | lynx --stdin</strong></blockquote><p>или так</p><blockquote><strong>curl http://127.0.0.1:8000/backupweb/telegra.ph/Kak-zabehkapit-runet-02-07.html | elinks </strong></blockquote><p>в зависимости от того какой браузер вы используете.</p><blockquote><strong><em>links2 -g http://127.0.0.1:8000/backupweb/telegra.ph/Kak-zabehkapit-runet-02-07.html</em></strong></blockquote><p><br></p><p><strong><em>Опции:</em></strong></p><p><strong> --restrict-file-names=windows  </strong></p><p>эта опция экранирует управляющие символы в названии скачиваемого URL если вы сохраняете в файловой системе Windows, например, в WSL при взаимодействии с файловой системой DriveFs. Если же в юниксах, то замените <em>windows</em> на <em>unix</em>  т. е. так <em>--restrict-file-names=unix</em></p><p><strong>--limit-rate=200k  </strong></p><p> эта опция  устанавливает ограничение скорости скачивания в 200 KB/s</p><p><strong>-e robots=of    </strong>забиваем на <em>robots.txt</em></p><p><strong>-P backupweb  </strong>сохарнить сайт в папку backupweb</p><p><strong>-r </strong>    рекурсивное скачивание</p><p><strong>-l 1   </strong>глубина скачивания (1 вложенная ссылка) </p><p><strong>-np</strong>   не подниматься выше начального адреса при рекурсивной загрузке</p><p><strong>-p </strong>    загружать все файлы, которые нужны для отображения страниц HTML (рисунки, звук, каскадные стили и т.д.)</p><p><strong>-k    </strong>После завершения загрузки конвертирует ссылки в документе для просмотра в автономном режиме. </p><p><strong>-E    </strong>сохранять документы HTML/CSS с надлежащими расширениями </p><p><strong>-K</strong>    перед преобразованием файла X делать резервную копию X.orig.    </p><p><strong>-N</strong>,   не загружать повторно файлы, только если они не новее, чем локальные.</p><p><strong>-nv</strong>   отключить вывод подробных сведений, но не полностью</p><p><strong>-t inf  </strong>установить число повторных попыток (0 или inf без ограничения)</p><p><strong>-H </strong>     заходить на чужие хосты при рекурсии.</p><p><br></p><p><strong>Не забывайте делиться вашими бэкапами с другими чтобы не нагружать сайты. </strong></p><p><br class="inline">Архив этой страницы: <a href="https://web.archive.org/web/20190222010336/https://telegra.ph/Kak-zabehkapit-runet-02-07" target="_blank">1</a> <br class="inline"></p><p><br class="inline"></p></article>
+          <div id="_tl_link_tooltip" class="tl_link_tooltip"></div>
+          <div id="_tl_tooltip" class="tl_tooltip">
+            <div class="buttons">
+              <span class="button_hover"></span>
+              <span class="button_group"><!--
+             --><button id="_bold_button"></button><!--
+             --><button id="_italic_button"></button><!--
+             --><button id="_link_button"></button><!--
+           --></span><!--
+           --><span class="button_group"><!--
+             --><button id="_header_button"></button><!--
+             --><button id="_subheader_button"></button><!--
+             --><button id="_quote_button"></button><!--
+           --></span>
+            </div>
+            <div class="prompt">
+              <span class="close"></span>
+              <div class="prompt_input_wrap"><input type="url" class="prompt_input" /></div>
+            </div>
+          </div>
+          <div id="_tl_blocks" class="tl_blocks">
+            <div class="buttons">
+              <button id="_image_button"></button><!--
+           --><button id="_embed_button"></button>
+            </div>
+          </div>
+          <aside class="tl_article_buttons">
+            <div class="account account_top"></div>
+            <button id="_edit_button" class="button edit_button">Edit</button><!--
+         --><button id="_publish_button" class="button publish_button">Publish</button>
+            <div class="account account_bottom"></div>
+            <div id="_error_msg" class="error_msg"></div>
+          </aside>
+        </main>
+      </div>
+    </div>
+    <div id="_tl_alerts" class="tl_alerts"></div>
+    <script>var T={"apiUrl":"https:\/\/edit.telegra.ph","datetime":1549570068,"pageId":"e5a25812be49e36aca486"};(function(){var b=document.querySelector('time');if(b&&T.datetime){var a=new Date(1E3*T.datetime),d='January February March April May June July August September October November December'.split(' ')[a.getMonth()],c=a.getDate();b.innerText=d+' '+(10>c?'0':'')+c+', '+a.getFullYear()}})();</script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.selection.min.js"></script>
+    <script src="js/autosize.min.js"></script>
+    <script src="js/load-image.all.min.js@1"></script>
+    <script src="js/quill.min.js@9"></script>
+    <script src="js/core.min.js@57"></script>
+  </body>
+</html>
